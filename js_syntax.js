@@ -19,7 +19,7 @@ const nothing = null;
 
 
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
-// Variable Mutation and Type Coercion 
+// Variable Mutation & Type Coercion 
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
 
 let mutation = 'ten';
@@ -47,7 +47,7 @@ isWorking = true;
 
 
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
-// basic operators
+// Basic Operators
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
 
 // operators are just basic javascript functions with a simple syntax
@@ -217,7 +217,7 @@ true || false = true
 */
 
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
-//Ternary Operator and Switch Statments
+//Ternary Operator & Switch Statments
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
 
 let age = 21;
@@ -336,6 +336,93 @@ const fullName = function (firstName, lastName) {
 // Arrays
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
 // an array is a collection of data defined by "[]" and separated by commas
+// arrays have an index for each item starting at 0 for the first index going left to right
+// you can have multipule data types in the same array
+
+
+let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let anotherArray = [10, 'hello', true, [1, 2, 3]];
+
+numbersArray[0];//will return "1"
+
+numbersArray[6];//will return "7"
+
+//you can also use negitive indices, they work in the oppsite direction.
+//if you use -1 as an index it will return the last item in the array as shown. 
+
+numbersArray[-1];//this returns "10"
+
+numbersArray[-3];//returns "8"
+
+
+//if you have a nested array you can access the indices like this
+
+anotherArray[-1][2];//returns "3" from the nested array
+
+
+//===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
+// array data mutation
+
+fakeArray[5] = 'new item';
+// this will take the string and assign it to the 5th index 
+// it will override any value in the target index
+
+
+//if you want to appened a new value to the end of an array..
+
+fakeArray[fakeArray.length] = 'the end';
+
+//this adds the string to the end no matter how long the Arr is
+
+
+//===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
+// Array Methods
+//===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
+
+let people = ['John', 'Susan', 'Michael', 'Carol'];
+
+//arr.length
+people.length;//will return "4"
+
+
+//arr.push(newItem)
+people.push('Jennifer');//will add the argument to the end of the arr
+
+
+//arr.unshift(newItem)
+people.unshift('Chris');//this adds to the beginning of the arr
+
+
+//arr.pop()
+people.pop();//removes "Carol" from the end of the list
+
+
+//arr.shift()
+people.shift();//removes "John" from the beginning of the list
+
+
+//arr.indexOf(thisItem)
+people.indexOf('Michael');//will return "2" 
+//if the arg is not found in the array, it will return -1 as the index
+
+
+//arr.splice(start, deleteCount)
+people.splice(1, 1);//['John', 'Michael', 'Carol'] removed 'Susan'
+//this method will remove the "deleteCount" num of items starting at the "start" index
+
+
+//arr.slice(start, end)
+let newPeople = people.slice(1, 3);//[Susan', 'Michael',]
+//slice() does not modify the original list, it will return a copy
+//"start" is the index where you want to start the copy
+//"end" is the index where the copy stops (does not include)
+
+
+//===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
+// Objects & Properties
+//===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
+
 
 
 

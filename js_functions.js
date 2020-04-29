@@ -19,7 +19,7 @@ function weightComvertor(unit, weight) {
     };
 };
 
-//console.log(weightComvertor('LB', 145));
+// console.log(weightComvertor('LB', 200));
 
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
 
@@ -43,5 +43,22 @@ function circumference(radius) {
 // console.log(circumference(10));
 
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
+// Tip Calculator
+//===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
 
+function tipCalc(bill) {
+    let tip;
+    if (bill < 50) {
+        tip = bill * .2;
+    } else if (bill >= 50 && bill < 200) {
+        tip = bill * .15;
+    } else {
+        tip = bill * .1;
+    };
+    return Math.round(tip);
+};
+
+// console.log(tipCalc(124), tipCalc(48), tipCalc(268));
+
+//===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*
 
